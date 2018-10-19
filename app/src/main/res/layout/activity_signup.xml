@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="UserName" />
+        android:hint="UserName"
+        android:inputType="textPersonName" />
 
     <Space
         android:layout_width="match_parent"
@@ -37,8 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="password" />
+        android:hint="Password"
+        android:inputType="textNoSuggestions|textPassword" />
 
     <Space
         android:layout_width="match_parent"
@@ -49,8 +49,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="confirm password" />
+        android:hint="confirm password"
+        android:inputType="textPersonName|textWebPassword" />
 
     <Space
         android:layout_width="match_parent"
