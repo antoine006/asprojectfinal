@@ -23,12 +23,14 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_main2);
         ILVcountries = (ListView) findViewById(R.id.LvCountries) ;
         arrayList.add(new Item(R.drawable.mainback,"Biography"));
-      /*  arrayList.add("Business and Finance");
-        arrayList.add("Fiction");
-        arrayList.add("History");
-        arrayList.add("Sceince");
-        arrayList.add("Sport");
-        arrayList.add("Photography");*/
+        ILVcountries = findViewById(R.id.ILVcountries);
+        arrayList.add(new Item(R.drawable.biography,"Biography"));
+        arrayList.add(new Item(R.drawable.action,"acrion"));
+        arrayList.add(new Item(R.drawable.crime,"crime"));
+        arrayList.add(new Item(R.drawable.drama,"drama"));
+        arrayList.add(new Item(R.drawable.sceince,"Sceince"));
+        arrayList.add(new Item(R.drawable.sports,"Sports"));
+        arrayList.add(new Item(R.drawable.Photography,"Photography"));
         arrayAdapter = new CustomAdapter(this,R.layout.custom_row,arrayList);
         ILVcountries.setAdapter(arrayAdapter);
         ILVcountries.setOnItemClickListener(this);
@@ -50,7 +52,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
        else if (position==4){
             i.putExtra("Category","Sceince" );
         }else if (position==5){
-            i.putExtra("Category","Sport" );
+            i.putExtra("Category","Sports" );
         }else if (position==6){
             i.putExtra("Category","Photography" );
         }
