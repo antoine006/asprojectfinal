@@ -10,11 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class CameraGalleryActivity extends AppCompatActivity implements View.OnClickListener{
-Button camera,gallery;
-ImageView imageView2;
-public static final int CAMERA_REQUEST = 0;
+    Button camera,gallery;
+    ImageView imageView2;
+    public static final int CAMERA_REQUEST = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public static final int CAMERA_REQUEST = 0;
         camera.setOnClickListener(this);
         gallery=(Button) findViewById(R.id.gallery);
         gallery.setOnClickListener(this);
-        imageView2 =(ImageView) findViewById(R.id.imageView2);
+        imageView2 =(ImageView) findViewById(R.id.cameraImageView);
     }
 
     @Override
@@ -33,18 +34,19 @@ public static final int CAMERA_REQUEST = 0;
             Intent i= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i,CAMERA_REQUEST);
 
-            }
-            else{
+        }
+        else{
 
             //later
         }
-        }
+    }
 
-        public void onActivityResult(int requestCode , int resultCode , Intent data){
-        if (resultCode== CAMERA_REQUEST&& resultCode == Activity.RESULT_OK){
+    public void onActivityResult(int requestCode , int resultCode , Intent data){
+  //      if (resultCode== CAMERA_REQUEST && resultCode == Activity.RESULT_OK){
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             imageView2 .setImageBitmap(photo);
-        }
-        }
+            Toast.makeText(this, "inside set photo", Toast.LENGTH_LONG).show();
+   //     }
     }
+}
 
