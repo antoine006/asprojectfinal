@@ -12,7 +12,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener{
-    ListView ILVcountries;
+    ListView LvCountries;
     CustomAdapter arrayAdapter;
     ArrayList<Item> arrayList = new ArrayList<>();
 
@@ -21,19 +21,19 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        ILVcountries = (ListView) findViewById(R.id.LvCountries) ;
+        LvCountries = (ListView) findViewById(R.id.LvCountries) ;
         arrayList.add(new Item(R.drawable.mainback,"Biography"));
-        ILVcountries = findViewById(R.id.ILVcountries);
+        LvCountries = findViewById(R.id.ILVcountries);
         arrayList.add(new Item(R.drawable.biography,"Biography"));
         arrayList.add(new Item(R.drawable.action,"acrion"));
         arrayList.add(new Item(R.drawable.crime,"crime"));
         arrayList.add(new Item(R.drawable.drama,"drama"));
         arrayList.add(new Item(R.drawable.sceince,"Sceince"));
         arrayList.add(new Item(R.drawable.sports,"Sports"));
-        arrayList.add(new Item(R.drawable.Photography,"Photography"));
+        arrayList.add(new Item(R.drawable.photography,"Photography"));
         arrayAdapter = new CustomAdapter(this,R.layout.custom_row,arrayList);
-        ILVcountries.setAdapter(arrayAdapter);
-        ILVcountries.setOnItemClickListener(this);
+        LvCountries.setAdapter(arrayAdapter);
+        LvCountries.setOnItemClickListener(this);
     }
 
     @Override
