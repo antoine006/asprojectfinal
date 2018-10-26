@@ -7,20 +7,26 @@
         <item
             android:id="@+id/nav_camera"
 
-            android:title="Import" />
+            android:title="signup" />
         <item
             android:id="@+id/nav_gallery"
 
-            android:title="Gallery" />
+            android:title="signin" />
         <item
             android:id="@+id/nav_slideshow"
 
-            android:title="Slideshow" />
+            android:title="Top ten books"
+            tools:ignore="DuplicateIds" />
         <item
             android:id="@+id/nav_manage"
 
-            android:title="Tools" />
+            android:title="cart" />
+        <item
+            android:id="@+id/nav_slideshow"
 
+            android:title="Main"
+            tools:ignore="DuplicateIds" />
+        <item android:title="" />
 
     </group>
 
